@@ -1,0 +1,5 @@
+name = A Custom Module
+description = A Custom Module
+package = Custom
+core = 7.x
+configure = admin/config/test

@@ -1,0 +1,33 @@
+<?php
+
+function mymodule_schema() {
+  $schema['user_warn'] = array(
+    // Example (partial) specification for table "node".
+    'description' => 'The base table for nodes.',
+    'fields' => array(
+      'wid' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'user_name' => array(
+        'description' => 'User Name.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'user_email' => array(
+        'description' => 'The User Email.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ),
+
+    'primary key' => array('wid'),
+  );
+  return $schema;
+}
